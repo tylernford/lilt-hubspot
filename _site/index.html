@@ -702,6 +702,9 @@
 </footer>
       </div>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="assets/js/scroll.js"></script>
+
       <script>
          // ---------------------------------------------------------------------------
          // Menu Toggle      
@@ -739,14 +742,8 @@
                nav_wrap.classList.add('at-top--true');
             }
          });
+         
          /*
-         window.onscroll = function(e) {
-            // print "false" if direction is down and "true" if up
-            console.log(this.oldScroll > this.scrollY);
-            this.oldScroll = this.scrollY;
-         }*/
-         
-         
          window.addEventListener('wheel', function(e) {
             if (e.deltaY < 0) {
                nav_wrap.classList.remove('scroll-direction--down');
@@ -756,7 +753,20 @@
                nav_wrap.classList.remove('scroll-direction--up');
                nav_wrap.classList.add('scroll-direction--down');
             }
-         });      
+         });
+         */
+         $.scrollDetection({
+            scrollDown: function() {
+               nav_wrap.classList.remove('scroll-direction--up');
+               nav_wrap.classList.add('scroll-direction--down');
+            },
+            scrollUp: function() {
+               nav_wrap.classList.remove('scroll-direction--down');
+               nav_wrap.classList.add('scroll-direction--up');
+            }
+
+         });
+
       </script>
       
       <!--   Video   -->
