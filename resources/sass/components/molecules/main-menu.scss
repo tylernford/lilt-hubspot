@@ -1,3 +1,13 @@
+.main-menu--sm { transform: translateX(100%);transition: transform ease-out .25s, opacity .25s; opacity: 0 }
+.main-menu--sm.active { transform: translateX(0); opacity: 1 }
+.m-main-menu__list--sm li {
+	line-height: 27px;
+	font-weight: 500;
+}
+@media screen and (min-width: 62rem) {
+	.main-menu--sm { display: none }
+}
+
 /*Main Menu*/
 .m-main-menu {
 	@apply bg-snow-1;

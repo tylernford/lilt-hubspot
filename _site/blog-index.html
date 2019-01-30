@@ -17,7 +17,7 @@
 
       
          <div class="flex-grow">
-            <div class="container--site page--index at-top--true scroll-direction--up">
+            <div class="container--site page--index at-top--true scroll-direction--up" id="nav">
 	
 	
 	<header class="m-main-menu">
@@ -158,11 +158,126 @@
 					<a class="a-menu-link a-menu-link--text a-menu-link--text--inverse" href="/app">Sign In</a>
 				</li>
 			</ul>
-		</div>
 	</header>
+	
+	
+	
+	
+	<!--   Small Menu   -->
+	<div class="main-menu--sm   font-primary">
+		<div class="btn--hamburger btn--hamburger--sm">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul class="m-main-menu__list--sm">
+			
+			<li class="m-main-menu--sm__list__nav-item relative">
+				<div class="m-main-menu__list--sm__nav-item">
+					<div class="a-menu-link a-menu-link--text">
+						Solution
+						<span class="btn--icon__icon svg-icon svg-icon--chevron">
+							<svg viewBox="0 0 12 9"><g id="Atoms/Buttons/dropdown-small" transform="translate(-105.000000, -13.000000)" fill="#343D59" fill-rule="nonzero"><g id="Core/icons/chevron-right" transform="translate(111.000000, 17.500000) rotate(90.000000) translate(-111.000000, -17.500000) translate(108.500000, 13.500000)"><polygon points="3.13007592 4 -1.41004798 0.108465229 -0.108465229 -1.41004798 6.20325741 4 -0.108465229 9.41004798 -1.41004798 7.89153477" fill="currentColor"></polygon></g></g></svg>
+						</span>
+					</div>
+					<nav class="m-main-menu__subnav-static">
+						<div class="m-main-menu__subnav__inner">
+							<a href="/solutions" class="m-main-menu__subnav__item a-menu-link a-menu-link--text">
+								<span class="btn--icon-wrap">
+									<div class="btn-icon__text">
+										Overview
+									</div>
+								</span>
+							</a>
+							<a href="/security" class="m-main-menu__subnav__item a-menu-link a-menu-link--text">
+								<span class="btn--icon-wrap">
+									<div class="btn-icon__text">
+										Security
+									</div>
+								</span>
+							</a>
+							<a href="/integrations" class="m-main-menu__subnav__item a-menu-link a-menu-link--text">
+								<span class="btn--icon-wrap">
+									<div class="btn-icon__text">
+										Integrations
+									</div>
+								</span>
+							</a>
+						</div>
+					</nav>
+				</div>
+			</li>
+			<li class="m-main-menu--sm__list__nav-item relative">
+				<a href="/resources" class="a-menu-link a-menu-link--text">
+					<span class="btn--icon-wrap">
+						<div class="btn-icon__text">
+							Resources
+						</div>
+					</span>
+				</a>
+			</li>
+			<li class="m-main-menu--sm__list__nav-item relative">
+				<div class="m-main-menu__list--sm__nav-item">
+					<div class="a-menu-link a-menu-link--text">About
+					<span class="btn--icon__icon svg-icon svg-icon--chevron">
+						<svg viewBox="0 0 12 9"><g id="Atoms/Buttons/dropdown-small" transform="translate(-105.000000, -13.000000)" fill="#343D59" fill-rule="nonzero"><g id="Core/icons/chevron-right" transform="translate(111.000000, 17.500000) rotate(90.000000) translate(-111.000000, -17.500000) translate(108.500000, 13.500000)"><polygon points="3.13007592 4 -1.41004798 0.108465229 -0.108465229 -1.41004798 6.20325741 4 -0.108465229 9.41004798 -1.41004798 7.89153477" fill="currentColor"></polygon></g></g></svg>
+					</span>
+				</div>
+				<nav class="m-main-menu__subnav-static">
+					<div class="m-main-menu__subnav__inner">
+						<a href="/about" class="m-main-menu__subnav__item a-menu-link a-menu-link--text">
+							<span class="btn--icon-wrap">
+								<div class="btn-icon__text">
+									Who We Are
+								</div>
+							</span>
+						</a>
+						<a href="/careers" class="m-main-menu__subnav__item a-menu-link a-menu-link--text">
+							<span class="btn--icon-wrap">
+								<div class="btn-icon__text">
+									Careers
+								</div>
+							</span>
+						</a>
+						<a href="/academic" class="m-main-menu__subnav__item a-menu-link a-menu-link--text">
+							<span class="btn--icon-wrap">
+								<div class="btn-icon__text">
+									Academic
+								</div>
+							</span>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</li>
+		
+		<li class="m-main-menu--sm__list__nav-item relative">
+			<a href="/translators" class="a-menu-link a-menu-link--text">
+				<span class="btn--icon-wrap">
+					<div class="btn-icon__text">
+						Become a Translator
+					</div>
+				</span>
+			</a>
+		</li>
+		<li>
+			<button id="show-modal" class="a-menu-link a-menu-link--btn btn btn--primary">Request a Demo</button>
+		</li>
+		<li>
+			<a href="/app" class="a-menu-link a-menu-link--text a-menu-link--text--inverse">Sign In</a>
+		</li>
+	</ul>
+</div>
+
 		
 	
 </div>
+
+
+<style>
+	
+</style>
 
 <div class="py-2   md:py-12">
 <section class="max-w-4xl mt-24 mx-auto relative z-10 overflow-hidden">
@@ -568,6 +683,63 @@
 </footer>
       </div>
 
+      <script>
+         // ---------------------------------------------------------------------------
+         // Menu Toggle      
+         var hamburger = document.querySelector('.btn--hamburger');
+         var hamburger_sm = document.querySelector('.btn--hamburger--sm');
+         var nav       = document.querySelector('.main-menu--sm');
+         
+         hamburger.onclick = function(){
+            hamburger.classList.toggle('active');
+            hamburger_sm.classList.toggle('active');
+            nav.classList.toggle('active');
+         };
+         
+         hamburger_sm.onclick = function(){
+            hamburger.classList.toggle('active');
+            hamburger_sm.classList.toggle('active');
+            nav.classList.toggle('active');
+         };
+         
+         
+         
+         // ---------------------------------------------------------------------------
+      	// Add Shadow to Nav on Scroll
+         var scrollPosition = window.scrollY;
+         var nav_wrap = document.getElementById('nav');
+
+         window.addEventListener('scroll', function() {
+            scrollPosition = window.scrollY;
+
+            if (scrollPosition >= 200) {
+               nav_wrap.classList.remove('at-top--true');
+               nav_wrap.classList.add('at-top--false');
+            } else {
+               nav_wrap.classList.remove('at-top--false');
+               nav_wrap.classList.add('at-top--true');
+            }
+         });
+         /*
+         window.onscroll = function(e) {
+            // print "false" if direction is down and "true" if up
+            console.log(this.oldScroll > this.scrollY);
+            this.oldScroll = this.scrollY;
+         }*/
+         
+         
+         window.addEventListener('wheel', function(e) {
+            if (e.deltaY < 0) {
+               nav_wrap.classList.remove('scroll-direction--down');
+               nav_wrap.classList.add('scroll-direction--up');
+            }
+            if (e.deltaY > 0) {
+               nav_wrap.classList.remove('scroll-direction--up');
+               nav_wrap.classList.add('scroll-direction--down');
+            }
+         });      
+      </script>
+      
       <!--   Video   -->
       <script src="assets/js/plyr.js"></script>
       <script>

@@ -23,6 +23,63 @@
          {% include footer.html %}
       </div>
 
+      <script>
+         // ---------------------------------------------------------------------------
+         // Menu Toggle      
+         var hamburger = document.querySelector('.btn--hamburger');
+         var hamburger_sm = document.querySelector('.btn--hamburger--sm');
+         var nav       = document.querySelector('.main-menu--sm');
+         
+         hamburger.onclick = function(){
+            hamburger.classList.toggle('active');
+            hamburger_sm.classList.toggle('active');
+            nav.classList.toggle('active');
+         };
+         
+         hamburger_sm.onclick = function(){
+            hamburger.classList.toggle('active');
+            hamburger_sm.classList.toggle('active');
+            nav.classList.toggle('active');
+         };
+         
+         
+         
+         // ---------------------------------------------------------------------------
+      	// Add Shadow to Nav on Scroll
+         var scrollPosition = window.scrollY;
+         var nav_wrap = document.getElementById('nav');
+
+         window.addEventListener('scroll', function() {
+            scrollPosition = window.scrollY;
+
+            if (scrollPosition >= 200) {
+               nav_wrap.classList.remove('at-top--true');
+               nav_wrap.classList.add('at-top--false');
+            } else {
+               nav_wrap.classList.remove('at-top--false');
+               nav_wrap.classList.add('at-top--true');
+            }
+         });
+         /*
+         window.onscroll = function(e) {
+            // print "false" if direction is down and "true" if up
+            console.log(this.oldScroll > this.scrollY);
+            this.oldScroll = this.scrollY;
+         }*/
+         
+         
+         window.addEventListener('wheel', function(e) {
+            if (e.deltaY < 0) {
+               nav_wrap.classList.remove('scroll-direction--down');
+               nav_wrap.classList.add('scroll-direction--up');
+            }
+            if (e.deltaY > 0) {
+               nav_wrap.classList.remove('scroll-direction--up');
+               nav_wrap.classList.add('scroll-direction--down');
+            }
+         });      
+      </script>
+      
       <!--   Video   -->
       <script src="assets/js/plyr.js"></script>
       <script>
