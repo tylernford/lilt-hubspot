@@ -63,6 +63,9 @@ a, button { transition: all 150ms ease-in-out }
 .nested-mb-6 > p,
 .nested-mb-6 > ul { @apply mb-6 }
 
+@media screen and (min-width: 48rem) {
+	.md\:h-65 {height:4.0625rem}
+}
 
 // ---------------------------------------------------------------------------
 // Section

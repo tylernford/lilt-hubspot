@@ -21137,7 +21137,7 @@ div.btn--primary a.\--tiny {
 */
 
 .btn--primary--tiny {
-  padding: .5rem 1rem .4375rem;
+  padding: .5625rem 1rem .5rem 1rem;
   font-size: .9375rem;
 }
 
@@ -21403,6 +21403,7 @@ div.btn--primary a.\--tiny {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   margin-top: 1px;
+  top: 1.53125rem;
   cursor: pointer;
   position: absolute;
   /*// Bars*//*// Active + Hover*//*// Active*/
@@ -24187,6 +24188,12 @@ button {
 .nested-mb-6 > p,
 .nested-mb-6 > ul {
   margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .md\:h-65 {
+    height: 4.0625rem;
+  }
 }
 
 .section {
