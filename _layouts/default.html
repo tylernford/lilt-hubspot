@@ -32,6 +32,8 @@
          var hamburger = document.querySelector('.btn--hamburger');
          var hamburger_sm = document.querySelector('.btn--hamburger--sm');
          var nav       = document.querySelector('.main-menu--sm');
+         var menu_item = document.querySelector('.m-main-menu--sm__list__nav-item');
+         var menu_sub_item = document.querySelector('.m-main-menu__list--sm__nav-item');
          
          hamburger.onclick = function(){
             hamburger.classList.toggle('active');
@@ -45,10 +47,14 @@
             nav.classList.toggle('active');
          };
          
+         menu_item.onclick = function(){
+            menu_sub_item.classList.toggle('is-active');
+         };
+         
          
          
          // ---------------------------------------------------------------------------
-      	// Add Shadow to Nav on Scroll
+      	// Show/hide Nav on Scroll
          var scrollPosition = window.scrollY;
          var nav_wrap = document.getElementById('nav');
 
