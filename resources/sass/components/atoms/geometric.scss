@@ -1,0 +1,75 @@
+
+
+.bg-rhombus-1 {
+	@apply relative bg-snow-5;
+    margin-bottom: 5rem;
+
+	&:before {
+		@apply bg-snow-5;
+
+    clip-path: polygon(100% 0%, 100% 0, 105% 100%, 0% 100%);
+    content: "";
+    height: 5rem;;
+    position: absolute;
+    top: -5rem;
+    width: 100%;
+	}
+	&:after {
+		@apply bg-snow-5;
+
+    clip-path: polygon(0 100%, 0 0,100% 0,0 100%);
+    content: "";
+    height: 5rem;;
+    position: absolute;
+    bottom: -5rem;
+    width: 100%;
+    z-index: -1;
+	}
+}
+
+.bg-rhombus-1--flat-b {
+    @apply mb-0;
+    &:after {
+        @apply hidden;
+    }
+
+}
+
+/*Purple Rhombus*/
+/*
+.bg-rhombus-2 {
+    @apply relative bg-purple-1;
+    margin-bottom: calc(80/16)rem;
+
+    &:after {
+        @apply bg-purple-1 pin-l;
+
+    clip-path: polygon(0 100%, 0 0,100% 0,0 100%);
+    //clip-path: polygon(0 100%,0 0,86% 0,0 98%);
+    content: "";
+    height: calc(80/16)rem;;
+    position: absolute;
+    bottom: calc(-80/16)rem;
+    width: 100%;
+    z-index: 0;
+    }
+}
+*/
+
+/*White Rhombus (undercuts rhombus 2)*/
+/*.bg-rhombus-3 {
+    @apply relative bg-white;
+
+    &:after {
+        @apply bg-white pin-l;
+        background-color: white;
+        top: -6rem;
+        clip-path: polygon(200% 0 ,0% 0,100% 0,0 119%);
+        content: "";
+        height: 5rem;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 30;
+    }
+}*/

@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+{% include/nav.html %}
+
+{% include blocks/hero-centered.html %}
+
+<section class="pb-14">
+   <div class="max-w-md2 mx-auto mb-14 -mt-2 px-8   sm:px-12   md:-mt-2 md:px-20">      
+      {% 
+         include article-card.html 
+         
+         photo="assets/img/article--1.jpg"
+         time="September 30, 2018"
+         title="What Makes for a Great Style Guide"
+         reading-time="5–7 Minute Read"
+         author="assets/img/author--1.jpg"
+         excerpt="Going global means localizing key pieces of your company’s content to be understood, relevant, and well-received by international customers…"
+      %}
+      
+      {% 
+         include article-card.html 
+         
+         photo="assets/img/article--2.jpg"
+         time="October 4, 2018"
+         title="Announcing Lilt's Series A Financing"
+         reading-time="2 Minute Read"
+         author="assets/img/author--2.jpg"
+         excerpt="Today I’m pleased to announce that we raised $9.5M in new funding led by Sequoia Capital. Bill Coughran, partner at Sequoia, will join our board..."
+      %}
+      
+      {% 
+         include article-card.html 
+         
+         photo="assets/img/article--3.jpg"
+         time="September 30, 2018"
+         title="To Win at Localization, Begin with Your Project Plan And..."
+         reading-time="8 Minute Read"
+         author="assets/img/author--1.jpg"
+         excerpt="Localization plays an integral role in a brand’s introduction into a new market, and ensures that your company’s product information and supporting content is accessible, localized..."
+      %}
+      
+      {% 
+         include article-card.html 
+         
+         photo="assets/img/article--4.jpg"
+         time="July 6, 2018"
+         title="Don't just translate, localize."
+         reading-time="2 Minute Read"
+         author="assets/img/author--3.jpg"
+         excerpt="When thinking about global expansion for your business, consider this: 80% of the world's population doesn't speak English."
+      %}
+      
+      {% 
+         include article-card.html 
+         
+         photo="assets/img/article--5.png"
+         time="September 30, 2018"
+         title="Lilt's Favorite Neural Machine Translation Videos"
+         reading-time="5-7 Minute Read"
+         author="assets/img/author--1.jpg"
+         excerpt="Going global means localizing key pieces of your company’s content to be understood, relevant, and well-received by international customers…"
+      %}
+      
+      {% 
+         include article-card.html 
+         
+         photo="assets/img/article--6.jpg"
+         time="September 30, 2018"
+         title="How to measure the impact of localization on Customer..."
+         reading-time="4-5 Minute Read"
+         author="assets/img/author--1.jpg"
+         excerpt="Localization plays an integral role in a brand’s introduction into a new market, and ensures that your company’s product information and supporting content is accessible, localized..."
+      %}
+   </div>
+
+   <button class="btn btn--primary mx-auto">Load More</button>
+</section>
+{% 
+   include blocks/cta.html 
+   
+   heading="Ready for more?"
+   copy="Interested in having our content sent straight to your inbox? Click below to subscribe to our blog and you’ll be the first to know when we release a new blog post!"
+   button="Call to Action"
+
+%}

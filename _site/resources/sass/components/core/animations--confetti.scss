@@ -1,0 +1,357 @@
+:root {
+    --orange: #FAA06C;
+    --green: #A0E9C3;
+    --purple: #4230C1;
+    --blue: #6BC9EB;
+
+}
+.svg-pattern {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  height: 450px;
+  width: 380px;
+}
+
+
+
+
+/*// Animation Kit*/
+.ani-p_b_g {
+  animation-name: p_b_g;
+}
+.ani-r_b_g {
+  animation-name: r_b_g;
+}
+.ani-p_b {
+  animation-name: p_b;
+}
+.ani-p_b_slow {
+  animation-name: p_b_slow;
+}
+.ani-bb_g_p {
+  animation-name: bb_g_p;
+}
+.ani-r_b {
+  animation-name: r_b;
+}
+.ani-g_r {
+  animation-name: g_r;
+}
+.ani-r_b_slow {
+  animation-name: r_b_slow;
+}
+.ani-r_rfade {
+  animation-name: r_rfade;
+}
+.ani-gfade {
+  animation-name: gfade;
+}
+.ani-pfade {
+  animation-name: pfade;
+}
+.ani-g_b {
+  animation-name: g_b;
+}
+.ani-g_p_b_p {
+  animation-name: g_p_b_p;
+}
+.ani-g_p_b_p_g {
+  animation-name: g_p_b_p_g;
+}
+.ani-p_b_g {
+  animation-name: p_b_g;
+}
+.ani-b_p_g_p {
+  animation-name: b_p_g_p;
+}
+/*// Durations*/
+.ani-dur-1 {
+  animation-duration: 1s;
+}
+.ani-dur-2 {
+  animation-duration: 2s;
+}
+.ani-dur-3 {
+  animation-duration: 3s;
+}
+.ani-dur-4 {
+  animation-duration: 4s;
+}
+.ani-dur-6 {
+  animation-duration: 6s;
+}
+/*// Delays*/
+.ani-delay-1 {
+  animation-delay: 1s;
+}
+/*// plays and "stays"*/
+.ani-fill-both {
+  animation-fill-mode: both
+}
+/*// General Settings*/
+.confetti-el {
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+/*// Complex Animations*/
+
+.animation-multi--fade-in {
+    opacity: 0;
+    animation: 1s fadeIn 0s 1  ease-in-out both, 4s g_p_b_p_g 0s infinite alternate ease-in-out;
+}
+.animation-rb--fade-in {
+    opacity: 0;
+    animation: 1s fadeIn 2s 1  ease-in-out both, 2s r_b 0s infinite alternate ease-in-out;
+}
+
+
+
+/*// ------ Keyframes:*/
+
+@keyframes g_p_b_p {
+  0% {
+    color: var(--green);
+
+  }
+
+  33.333333333% {
+    color: var(--purple);
+  }
+
+  66.666666666% {
+    color:  var(--blue);
+  }
+
+  100% {
+    color: var(--purple);
+  }
+}
+@keyframes g_p_b_p_g {
+  0% {
+    color: var(--green);
+
+  }
+
+  25% {
+    color: var(--purple);
+  }
+
+  50% {
+    color:  var(--blue);
+  }
+
+  75% {
+    color: var(--purple);
+  }
+  100% {
+    color:var(--green)
+  }
+}
+@keyframes p_b_g {
+ 
+  0% {
+    color: var(--purple);
+  }
+
+  50% {
+    color:  var(--blue);
+  }
+
+  100% {
+    color:var(--green)
+  }
+}
+@keyframes r_b_g {
+  0% {
+    color: var(--orange);
+
+  }
+  50% {
+    color: var(--blue)
+  }
+  100% {
+    color:var(--green)
+  }
+}
+
+@keyframes bb_g_p {
+  0% {
+    color: #69D1EE;
+
+  }
+  50% {
+    color:var(--green)
+  }
+  100% {
+    color:var(--purple)
+  }
+}
+
+@keyframes p_b {
+  0% {
+    color: var(--purple);
+
+  }
+  100% {
+    color: var(--blue)
+  }
+}
+
+@keyframes p_b_slow {
+  0% {
+    color: var(--purple);
+
+  }
+  20% {
+    color: var(--blue)
+  }
+  80% {
+    color: var(--blue)
+  }
+  100% {
+    color: var(--purple);
+
+  }
+}
+
+@keyframes r_b {
+  0% {
+    color: var(--orange);
+
+  }
+  100% {
+    color: var(--blue)
+  }
+}
+@keyframes r_b_slow {
+  0% {
+    color: var(--orange);
+
+  }
+  20% {
+    color: var(--blue)
+  }
+  80% {
+    color: var(--blue)
+  }
+  100% {
+    color: var(--orange);
+
+  }
+}
+@keyframes r_rfade {
+  0% {
+    color: var(--orange);
+
+  }
+  40% {
+    color: var(--orange);
+
+  }
+  80% {
+    color: rgba(250, 160, 108, .6);
+  }
+  100% {
+    color: var(--orange);
+
+  }
+}
+@keyframes gfade {
+  0% {
+    color: var(--green);
+
+  }
+  40% {
+    color: var(--green);
+
+  }
+  80% {
+    color: rgba(160, 233, 195, .4);
+  }
+  100% {
+    color: var(--green);
+
+  }
+}
+@keyframes pfade {
+  0% {
+    color: var(--purple);
+
+  }
+  40% {
+    color: var(--purple);
+
+  }
+  80% {
+    color:rgba(66, 48, 193, .6);
+  }
+  100% {
+    color: var(--purple);
+
+  }
+}
+
+
+@keyframes g_b {
+  0% {
+    color: var(--green);
+
+  }
+  100% {
+    color: var(--blue)
+  }
+}
+@keyframes g_r {
+  0% {
+    color: var(--green);
+
+  }
+  100% {
+    color:var(--orange)
+  }
+}
+
+
+
+@keyframes b_p_g_p {
+  0% {
+    color:  var(--blue);
+
+  }
+  25% {
+    color:var(--purple)
+  }
+  50% {
+    color:var(--green)
+  }
+  100% {
+    color:var(--purple)
+  }  
+  
+}
+
+
+
+
+
+
+
+/*// Fade In*/
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+
+    100% {
+      opacity:1;
+    }
+  }

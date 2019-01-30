@@ -1,0 +1,51 @@
+/* 
+	# Responsive Type Scale 
+	---
+	Anything above 36
+*/
+
+//Headers
+
+// 30/36
+.header-hecto {
+	@apply .text-deka;
+}
+/*
+.header-iota {
+	@apply .text-deka;
+}
+
+// 36/54
+/*
+.header-mega {
+	@apply .text-hecto;
+}
+*/
+// 46/76
+/*
+.header-giga {
+	@apply .text-kilo;
+}
+*/
+@screen md {
+	.header-hecto {
+		@apply .text-hecto; 
+	}
+	/*
+	.header-iota {
+		@apply .text-iota;
+	}
+	.header-mega {
+		@apply .text-mega;
+	}
+	.header-giga {
+		@apply .text-giga;
+	}*/
+}
+
+
+
+// Copy
+.copy-small {
+	@apply text-grey-3 text-small2 leading-normal font-secondary;
+}

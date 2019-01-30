@@ -1,0 +1,42 @@
+.input {
+	@apply block text-small w-full;
+	
+	&.--label {
+		@apply font-medium font-primary leading-none mb-0 text-grey-4
+	}
+	
+	&.--field {
+		@apply appearance-none bg-transparent border border-grey-4 cursor-pointer h-9 rounded .text-grey-3;
+		padding: 0 9px 3px 9px;
+		transition: all 150ms ease-in-out;
+		
+		&:placeholder-shown { 
+			@apply border-grey-1;
+		
+			&::placeholder { @apply opacity-50 text-grey-3  }
+		}
+		
+		&:active, &:focus {
+			@apply .border-green-3;
+			outline: 0
+		}
+	}
+	
+   /*	
+	&.--primary {
+		@apply .bg-orange .border .border-orange .font-medium .h-11 .text-lg .text-white;
+		
+		&:hover {
+			@apply .bg-orange-dark .border-orange-dark;
+		}
+		
+		&.--light {
+			@apply .bg-orange-light .border-orange-light;
+			
+			&:hover {
+				@apply .bg-orange .border-orange
+			}
+		}
+	}
+   */
+}

@@ -1,0 +1,42 @@
+/*Billboard*/
+.billboard {
+	@apply text-center ;
+}
+.billboard__inner {
+	@apply relative py-12 overflow-hidden;
+}
+.billboard__content {
+	@apply relative z-10 ;
+}
+.billboard__pattern {
+	@apply  absolute pin-t pin-l w-full h-full;
+	svg {
+		@apply h-auto;
+	}
+}
+
+
+.billboard--confetti {
+	.billboard__pattern {
+		@apply .block;
+	}
+}
+
+
+.billboard__header {
+	@apply font-primary mb-2 text-white;
+}
+.billboard__description {
+	@apply mb-8 text-white font-secondary;
+}
+
+@media screen and (min-width: 48rem) {
+	.billboard__description {
+		@apply mx-auto;
+		max-width: 28.75rem;
+	}
+	.billboard__inner {
+		padding-top: 7.5rem;
+		padding-bottom: 6.25rem;
+	}
+}

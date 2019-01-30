@@ -1,0 +1,40 @@
+.resource-cards {
+	@media screen and (min-width: 48rem) {
+		@apply flex -mx-3
+	}
+	
+	.resource-card {
+		@apply mb-6;
+		@media screen and (min-width: 48rem) {
+			@apply mb-0 px-3 w-1/2
+		}
+		
+		> div {
+			@apply pb-8 pt-6 px-6 rounded-lg text-center;
+			
+			@media screen and (min-width: 48rem) {
+				@apply flex text-left;
+				
+				> div {
+					@apply px-5 
+				}
+			}
+		}
+		
+		img {
+			@apply h-15 mb-4 w-15;
+			
+			@media screen and (min-width: 48rem) {
+				@apply h-18 mb-4 mt-6 mx-5 w-18
+			}
+		}
+		
+		h6 { @apply mb-1 text-grey-2 text-small }
+		
+		h3 {
+			@apply font-medium font-primary mb-4 text-delta text-purple-4
+		}
+		
+		p { @apply font-medium font-primary leading-none text-purple-1 text-small }
+	}
+}

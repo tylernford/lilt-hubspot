@@ -1,0 +1,28 @@
+.section-header { @apply max-w-sm text-black-2 }
+
+/*
+.section-header--md {
+	@apply max-w-md;
+}
+.section-header--narrow {
+	@apply max-w-xxs;
+}
+*/
+
+.section-header--centered { @apply mx-auto text-center }
+
+.section-header__title { @apply font-primary leading-tight text-black-2 text-kappa }
+
+/*
+.section-header__descr {
+	@apply text-gamma leading-normal mt-3;
+}
+*/
+
+@screen md {
+	.header-hecto {
+		.section-header__title {
+			@apply text-hecto;
+		}
+	}
+}

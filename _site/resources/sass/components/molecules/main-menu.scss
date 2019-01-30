@@ -1,0 +1,58 @@
+/*Main Menu*/
+.m-main-menu {
+	@apply bg-snow-1;
+}
+.a-main-menu__logo {
+	@apply flex flex-row items-center
+}
+
+.m-main-menu__list {
+	@apply list-reset;
+
+	> li {
+		@apply inline-block p-4;
+
+		&:last-child {
+			@apply pr-0;
+		}
+	}
+}
+.a-menu-link--btn {
+	font-size: .9rem;
+} 
+.a-menu-link--text {
+	@apply block duration-1 timing-1 no-underline text-purple-4 property-all text-base;
+
+	&:hover {
+		@apply text-purple-1;
+	}
+}
+
+.a-menu-link--text--inverse {
+	@apply text-purple-1;
+
+	&:hover {
+		@apply text-purple-4;
+	}
+}
+
+
+.a-menu-link--text.nuxt-link-exact-active {
+	@apply text-purple-1;
+}
+
+.m-main-menu {
+	padding-top: 1.5625rem;
+	padding-bottom: 1.5625rem;
+}
+/* Screen */
+@screen md {
+	.m-main-menu {
+		/*padding-top: 1.5625rem;
+		padding-bottom: 1.5625rem;
+		*/
+		.main-menu__inner {
+			@apply flex justify-between
+		}
+	}
+}

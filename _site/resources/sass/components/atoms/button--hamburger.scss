@@ -1,0 +1,102 @@
+/*// Hamburger Close Icon
+
+// ============================================================================
+// Active/Inactive Menu
+//*/
+.btn--hamburger {
+  width: 1.75rem;
+  height: 1.75rem;
+  transform: rotate(0deg);
+	margin-top: 1px;
+
+  @apply cursor-pointer absolute;
+
+  
+  
+	/*// Bars*/
+	span {
+	  @apply 
+	  	bg-purple-3
+	  	block
+	  	absolute
+	  	w-full
+	  	opacity-100
+	  	pin-l;
+
+	  /*border-radius: 9px;*/
+	  height: 2px;
+	  transform: rotate(0deg);
+	  transition: .25s ease-in-out;
+
+		&:nth-child(1) {
+		  top: 0px;
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+		  top: 9px;
+		}
+
+		&:nth-child(4) {
+		  top: 19px;
+		}
+	}
+
+	/*// Active + Hover*/
+	&:hover,
+	&.active {
+		span {
+			@apply bg-purple-1;
+		}
+	}
+
+	/*// Active*/
+	&.active {
+		span {
+
+			&:nth-child(1) {
+			  top: 18px;
+			  width: 0%;
+			  left: 50%;
+			}
+
+			&:nth-child(2) {
+			  -webkit-transform: rotate(45deg);
+			  -moz-transform: rotate(45deg);
+			  -o-transform: rotate(45deg);
+			  transform: rotate(45deg);
+			}
+
+			&:nth-child(3) {
+			  -webkit-transform: rotate(-45deg);
+			  -moz-transform: rotate(-45deg);
+			  -o-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+			}
+
+			&:nth-child(4) {
+			  top: 18px;
+			  width: 0%;
+			  left: 50%;
+			}
+		
+		}
+
+	}
+
+
+}
+
+.main-menu--sm .btn--hamburger {
+	top: 28px;
+
+	span {
+		@apply bg-white;
+	}
+	&:hover,
+	&.active {
+		span {
+			@apply bg-white;
+		}
+	}
+}

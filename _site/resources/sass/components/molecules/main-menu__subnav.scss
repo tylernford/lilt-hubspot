@@ -1,0 +1,106 @@
+.m-main-menu__subnav {
+
+    @apply list-reset opacity-0;
+    
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    padding-top: 10px;
+    right: -100vw;
+    transform: translateY(20px);
+    opacity: 0;
+    width: 160px;
+    transition: opacity .5s cubic-bezier(.19,1,.22,1),transform .5s cubic-bezier(.19,1,.22,1),right 0s linear .5s;
+
+    /* Shadow */
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 8px;
+        right: 8px;
+        bottom: 0;
+        box-shadow: 0 0 28px rgba(53,41,190,.4);
+    }
+
+    /* Caret */
+    &:after {
+        content: "";
+        height: 12px;
+        width: 12px;
+        background: #fff;
+        box-shadow: -2px -2px 4px rgba(53,41,190,.05);
+        position: absolute;
+        right: 38px;
+        top: 0;
+        transform: rotate(45deg) translateY(50%);
+    }
+   
+
+    /* Inner */
+    &__inner--bg {
+        background-color: #fff;
+        position: relative;
+        text-align: left;
+        padding: 16px;
+        border-radius: 4px;
+    }
+    &__inner {
+        @apply my-3;
+    }
+    
+    /* Item */
+    &__item {
+        @apply mb-4;
+
+        &:last-child {
+            @apply mb-0;
+        }
+    }
+}
+
+
+/* Chevron */
+.m-main-menu__list {
+	.btn--icon__icon.svg-icon--chevron {
+		margin: 0 -9px 0 4px;
+		height: 12px;
+		width: 9px;
+	}
+}
+
+/* Active (large)*/
+.m-main-menu__list__nav-item {
+    &:hover {
+         /* Active */
+         .m-main-menu__subnav {
+            @apply opacity-100;
+            right: -28px;
+            transform: translateY(0);
+            transition: opacity .5s cubic-bezier(.19,1,.22,1),transform .5s cubic-bezier(.19,1,.22,1);
+        }
+    }
+}
+
+
+
+/* Small Screen */
+.m-main-menu--sm__list__nav-item {
+    .m-main-menu__subnav__item {
+        @apply text-gamma ml-3;
+    }
+
+}
+/* Active (small) */
+.m-main-menu__subnav-static {
+    @apply hidden;
+}
+.m-main-menu__list--sm__nav-item.is-active {
+    .m-main-menu__subnav-static {
+        @apply block;
+    }
+    /* Chevron */
+    .svg-icon--chevron svg {transform: rotate(-180deg);}
+}

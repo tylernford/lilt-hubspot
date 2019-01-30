@@ -1,0 +1,71 @@
+//
+// Peak CRE
+//
+
+@tailwind preflight;
+@tailwind utilities;
+@tailwind screens;
+
+// Core
+@import "components/core/animations--confetti";
+@import 'components/core/fonts';
+@import "components/core/icon";
+@import 'components/core/images';
+@import "components/core/transitions--core";
+@import "components/core/type--scale";
+
+// Atoms
+@import "components/atoms/buttons";
+@import "components/atoms/dropdown";
+@import "components/atoms/button--hamburger";
+@import "components/atoms/card";
+@import "components/atoms/forms";
+@import "components/atoms/geometric";
+@import "components/atoms/lists";
+@import "components/atoms/patterns";
+
+//Molecules
+@import "components/molecules/billboard";
+@import "components/molecules/caption";
+@import "components/molecules/feature-summary";
+@import "components/molecules/main-footer";
+@import "components/molecules/resource-card";
+@import "components/molecules/section-header";
+
+@import "components/molecules/main-menu--screen";
+@import "components/molecules/main-menu--scroll";
+@import "components/molecules/main-menu";
+@import "components/molecules/main-menu__subnav";
+
+// Plugins
+@import "plugins/plyr";
+
+
+// ---------------------------------------------------------------------------
+// Misc.
+
+body.menu_open {
+	@apply absolute w-full;
+	overflow: hidden
+}
+
+a, button { transition: all 150ms ease-in-out }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+	body { @apply antialiased }
+}
+
+.element-invisible {
+	@apply absolute h-px overflow-hidden w-px;
+	clip: rect(1px, 1px, 1px, 1px)
+}
+
+.nested-mb-6 > p,
+.nested-mb-6 > ul { @apply mb-6 }
+
+
+// ---------------------------------------------------------------------------
+// Section
+.section {
+	@apply max-w-xl px-8;
+}

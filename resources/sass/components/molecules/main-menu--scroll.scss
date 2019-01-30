@@ -1,0 +1,56 @@
+
+/*Spacer*/
+.container--site {
+	padding-top: calc(80/16)rem;
+}
+@screen md {
+	.container--site {
+		padding-top: calc(113/16)rem;
+	}
+}
+.m-main-menu {
+	@apply fixed pin-l pin-t w-full z-50 property-all duration-3 timing-3;
+	transform: translate(0,0);
+}
+
+/* On Scroll Down */
+.scroll-direction--down {
+	.m-main-menu {
+    transform: translate(0,-100%);
+	}
+}
+
+.at-top--true.scroll-direction--down {
+	.m-main-menu {
+    transform: translate(0,0);
+	}
+}
+
+
+@screen lg {
+	.at-top--false {
+		.m-main-menu {
+			@apply py-0 ;
+		}
+	}
+}
+
+/*At top False*/
+.at-top--false {
+	.m-main-menu {
+		@apply bg-white shadow;
+	}
+
+
+
+
+	.a-menu-link--text {
+		@apply opacity-0 pointer-events-none;
+	}
+	.a-menu-link--btn {
+		@apply shadow-none;
+		&:hover {
+			@apply bg-purple-1 border-purple-1 text-white
+		}
+	}
+}

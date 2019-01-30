@@ -1,0 +1,11 @@
+.card {
+	@apply bg-white border border-grey-1 rounded shadow
+		timing-1 duration-2 property-all
+	;
+}
+
+.card--hover:hover {
+	@apply shadow-hover cursor-pointer;
+  /*transform: translate(0,-1px);*/
+}
+
