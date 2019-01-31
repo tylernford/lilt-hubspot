@@ -22555,15 +22555,15 @@ div.btn--primary a.\--tiny {
   display: none;
 }
 
-.m-main-menu__list--sm__nav-item.is-active {
+.m-main-menu--sm__list__nav-item.is-active .m-main-menu__list--sm__nav-item {
   /* Chevron */
 }
 
-.m-main-menu__list--sm__nav-item.is-active .m-main-menu__subnav-static {
+.m-main-menu--sm__list__nav-item.is-active .m-main-menu__list--sm__nav-item .m-main-menu__subnav-static {
   display: block;
 }
 
-.m-main-menu__list--sm__nav-item.is-active .svg-icon--chevron svg {
+.m-main-menu--sm__list__nav-item.is-active .m-main-menu__list--sm__nav-item .svg-icon--chevron svg {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }

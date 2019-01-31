@@ -12,12 +12,12 @@
    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
    
    <!-- Confetti Color Classes -->
-<style>
-    .conf--fill-1 {color: #FAA06C;}
-    .conf--fill-2 {color: #A0E9C3;}
-    .conf--fill-3 {color: #4230C1;}
-    .conf--fill-4 {color: #6BC9EB;}
-</style>
+   <style>
+      .conf--fill-1 {color: #FAA06C;}
+      .conf--fill-2 {color: #A0E9C3;}
+      .conf--fill-3 {color: #4230C1;}
+      .conf--fill-4 {color: #6BC9EB;}
+   </style>
 
    <body class="bg-snow-1 flex font-secondary leading-normal m-0 p-0 text-base text-grey-5">
       
@@ -40,8 +40,7 @@
          var hamburger = document.querySelector('.btn--hamburger');
          var hamburger_sm = document.querySelector('.btn--hamburger--sm');
          var nav       = document.querySelector('.main-menu--sm');
-         var menu_item = document.querySelector('.m-main-menu--sm__list__nav-item');
-         var menu_sub_item = document.querySelector('.m-main-menu__list--sm__nav-item');
+         var reveal_menu = document.querySelectorAll('.m-main-menu--sm__list__nav-item');
          
          hamburger.onclick = function(){
             hamburger.classList.toggle('active');
@@ -54,12 +53,15 @@
             hamburger_sm.classList.toggle('active');
             nav.classList.toggle('active');
          };
-         
-         menu_item.onclick = function(){
-            menu_sub_item.classList.toggle('is-active');
-         };
-         
-         
+
+         // Show/hide mobile menu subnavs
+         reveal_menu.forEach(function(flow) {
+            flow.onclick = function(){               
+               this.classList.toggle('is-active')
+            };
+         });
+
+
          
          // ---------------------------------------------------------------------------
       	// Show/hide Nav on Scroll

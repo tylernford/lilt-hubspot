@@ -97,10 +97,12 @@
 .m-main-menu__subnav-static {
     @apply hidden;
 }
-.m-main-menu__list--sm__nav-item.is-active {
-    .m-main-menu__subnav-static {
-        @apply block;
-    }
-    /* Chevron */
-    .svg-icon--chevron svg {transform: rotate(-180deg);}
+.m-main-menu--sm__list__nav-item.is-active {
+   .m-main-menu__list--sm__nav-item {
+       .m-main-menu__subnav-static {
+           @apply block;
+       }
+       /* Chevron */
+       .svg-icon--chevron svg {transform: rotate(-180deg);}
+   }
 }
