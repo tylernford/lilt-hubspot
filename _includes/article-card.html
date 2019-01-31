@@ -1,11 +1,65 @@
-<a class="card card--hover pb-7 mb-6 block">
+<div class="article-card   px-3">
+   <!--
+   <a class="card card--hover pb-7 mb-6 block">
+      <figure class="img is2by1 rounded rounded-b-none   md:is5by2">
+         <img src="{{ include.photo }}">
+      </figure>
+      
+      <div class="pt-6 px-4   md:px-8">
+         <div class="flex justify-between mb-3">
+            <div class="md:w-3/5   lg:w-4/5">
+               <time class="text-grey-4 text-tiny">{{ include.time }}</time>
+               <h3 class="font-medium font-primary text-delta text-purple-4">{{ include.title }}</h3>
+               <span class="font-semibold font-primary text-blue-4 text-xs tracking-sm uppercase">{{ include.reading-time }}</span>
+            </div>
+            
+            <div class="flex-no-shrink h-12 w-12">
+               <figure class="img is1by1 rounded-full">
+                  <img src="{{ include.author }}">
+               </figure>
+            </div>
+         </div>
+         <p class="mb-6 text-black-2 text-small   md:mb-12f">{{ include.excerpt }}</p>
+         
+         <span class="block pb-8 font-medium font-primary leading-none text-purple-1 text-small">Read More</span>
+      </div>
+   </a>-->
+   <a class="card card--hover   flex flex-col h-full pb-7 mb-6 block">
+      <figure class="img is2by1 rounded rounded-b-none   md:is5by2">
+         <img src="{{ include.photo }}">
+      </figure>
+      
+      <div class="flex flex-col h-full pt-6 px-4   md:px-8">
+         <div class="flex justify-between mb-3">
+            <div class="md:w-3/5   lg:w-4/5">
+               <time class="text-grey-4 text-tiny">{{ include.time }}</time>
+               <h3 class="font-medium font-primary text-delta text-purple-4">{{ include.title }}</h3>
+               <span class="font-semibold font-primary text-blue-4 text-xs tracking-sm uppercase">{{ include.reading-time }}</span>
+            </div>
+            
+            <div class="flex-no-shrink h-12 w-12">
+               <figure class="img is1by1 rounded-full">
+                  <img src="{{ include.author }}">
+               </figure>
+            </div>
+         </div>
+         <p class="mb-6 text-black-2 text-small   md:mb-12f">{{ include.excerpt }}</p>
+      </div>
+      <div class="pb-8 px-4  mt-auto  md:px-8">
+            <span class="block font-medium font-primary leading-none text-purple-1 text-small">Read More</span>
+      </div>
+   </a>
+</div>
+
+<!--
+<a class="card card--hover   flex flex-col h-full pb-7 mb-6 block">
    <figure class="img is2by1 rounded rounded-b-none   md:is5by2">
       <img src="{{ include.photo }}">
    </figure>
    
-   <div class="pt-6 px-4   md:px-8">
-      <div class="flex justify-between mb-3   md:mb-10f">
-         <div class="md:w-3/5">
+   <div class="flex flex-col h-full pt-6 px-4   md:px-8">
+      <div class="flex justify-between mb-3">
+         <div class="md:w-3/5   lg:w-4/5">
             <time class="text-grey-4 text-tiny">{{ include.time }}</time>
             <h3 class="font-medium font-primary text-delta text-purple-4">{{ include.title }}</h3>
             <span class="font-semibold font-primary text-blue-4 text-xs tracking-sm uppercase">{{ include.reading-time }}</span>
@@ -18,9 +72,12 @@
          </div>
       </div>
       <p class="mb-6 text-black-2 text-small   md:mb-12f">{{ include.excerpt }}</p>
-      
-      <span class="block pb-8 font-medium font-primary leading-none text-purple-1 text-small">Read More</span>
+   </div>
+   <div class="pb-8 px-4  mt-auto  md:px-8">
+         <span class="block font-medium font-primary leading-none text-purple-1 text-small">Read More</span>
    </div>
 </a>
-
+         -->
+         
+         <!--<div class="flex flex-col items-start mt-auto relative">-->
 

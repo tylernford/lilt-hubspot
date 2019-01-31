@@ -1,0 +1,40 @@
+<div class="blog__post--resources   pb-12 pt-12   md:pb-22">
+   <div class="section   mx-auto">
+      <div class="max-w-md mx-auto text-center">            
+         <div class="btn--icon --black   flex justify-center mb-12">
+            <a href="">
+               Browse Resources
+               <span class="btn--icon__icon svg-icon svg-icon--chevron">
+                  <svg fill="#343d59" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 12">
+                     <polygon class="cls-1" points="4.63 6 0.09 2.11 1.39 0.59 7.7 6 1.39 11.41 0.09 9.89 4.63 6"/>
+                  </svg>
+               </span>
+            </a>
+         </div>
+      </div>
+      
+      <div class="resource-cards   -mx-3   md:flex">
+         <!--   Card   -->
+         {% 
+            include article-card.html 
+            
+            photo="assets/img/article--5.png"
+            time="September 30, 2018"
+            title="Lilt's Favorite Neural Machine Translation Videos"
+            reading-time="5-7 Minute Read"
+            author="assets/img/author--1.jpg"
+            excerpt="Going global means localizing key pieces of your company’s content to be understood, relevant, and well-received by international customers…"
+         %}
+         {% 
+            include article-card.html 
+            
+            photo="assets/img/article--6.jpg"
+            time="September 30, 2018"
+            title="How to measure the impact of localization on Customer..."
+            reading-time="4-5 Minute Read"
+            author="assets/img/author--1.jpg"
+            excerpt="Localization plays an integral role in a brand’s introduction into a new market, and ensures that your company’s product information and supporting content is accessible, localized..."
+         %}
+      </div>
+   </div>
+</div>

@@ -35,6 +35,41 @@
 
 }
 
+.bg-rhombus-2 {
+	@apply relative;
+    //margin-bottom: 5rem;
+/*
+	&:before {
+		@apply bg-snow-5;
+
+    clip-path: polygon(100% 0%, 100% 0, 105% 100%, 0% 100%);
+    content: "";
+    height: 5rem;;
+    position: absolute;
+    top: -5rem;
+    width: 100%;
+ }*/
+	&:after {
+		@apply bg-snow-1;
+
+		clip-path: polygon(100% 0%, 100% 0, 105% 100%, 0% 100%);
+    content: "";
+    height: 5rem;;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    //z-index: -1;
+	}
+}
+
+.bg-rhombus-2--flat-b {
+    @apply mb-0;
+    &:after {
+        @apply hidden;
+    }
+
+}
+
 /*Purple Rhombus*/
 /*
 .bg-rhombus-2 {

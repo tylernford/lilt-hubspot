@@ -20885,6 +20885,22 @@ svg {
   }
 }
 
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+}
+
+@media screen and (min-width: 64rem) {
+  .full-width {
+    width: 64rem;
+    left: auto;
+    margin-left: -12rem;
+    margin-right: -12rem;
+  }
+}
+
 .timing-1 {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
@@ -21605,6 +21621,40 @@ div.btn--primary a.\--tiny {
 }
 
 .bg-rhombus-1--flat-b:after {
+  display: none;
+}
+
+.bg-rhombus-2 {
+  position: relative;
+  /*
+	&:before {
+		@apply bg-snow-5;
+
+    clip-path: polygon(100% 0%, 100% 0, 105% 100%, 0% 100%);
+    content: "";
+    height: 5rem;;
+    position: absolute;
+    top: -5rem;
+    width: 100%;
+ }*/
+}
+
+.bg-rhombus-2:after {
+  background-color: #fafbff;
+  -webkit-clip-path: polygon(100% 0%, 100% 0, 105% 100%, 0% 100%);
+          clip-path: polygon(100% 0%, 100% 0, 105% 100%, 0% 100%);
+  content: "";
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bg-rhombus-2--flat-b {
+  margin-bottom: 0;
+}
+
+.bg-rhombus-2--flat-b:after {
   display: none;
 }
 
@@ -24182,6 +24232,186 @@ a.plyr__control::before {
 .plyr--stopped.plyr--video.plyr--init-play .plyr__controls {
   opacity: 1;
   pointer-events: inherit;
+}
+
+.blog__post--hero {
+  margin-top: 5.125rem;
+}
+
+@media (min-width: 992px) {
+  .blog__post--hero {
+    margin-top: 7.3125rem;
+  }
+}
+
+.blog__post--article .blog__post--share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 112px;
+}
+
+@media (min-width: 992px) {
+  .blog__post--article .blog__post--share {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: .5rem;
+    margin-left: 3.75rem;
+    margin-top: 52px;
+    width: 3.25rem;
+  }
+}
+
+.blog__post--article .blog__post--share li {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  width: 1.25rem;
+}
+
+.blog__post--article .blog__post--share li .svg-icon.social-icon {
+  color: #8992a3;
+  width: 1.25rem;
+}
+
+.blog__post--article .blog__post--share li .svg-icon.social-icon:hover {
+  color: #3529be;
+}
+
+.blog__post--article .blog__post--share li .svg-icon.social-icon svg {
+  width: 1.25rem;
+}
+
+.blog__post--article h1,
+.blog__post--article h2,
+.blog__post--article h3,
+.blog__post--article h4,
+.blog__post--article h5,
+.blog__post--article h6 {
+  font-weight: 500;
+  font-family: LL Circular Pro Web, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.25rem;
+  color: #3529be;
+}
+
+.blog__post--article p {
+  font-size: 1rem;
+}
+
+.blog__post--article p,
+.blog__post--article ul {
+  margin-bottom: 1.5rem;
+}
+
+.blog__post--article ul:not(.blog__post--share) {
+  list-style: none;
+  padding: 0;
+  font-weight: 500;
+  font-family: LL Circular Pro Web, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-columns: 2;
+          columns: 2;
+}
+
+@media (min-width: 576px) {
+  .blog__post--article ul:not(.blog__post--share) {
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog__post--article ul:not(.blog__post--share) {
+    -webkit-columns: 3;
+            columns: 3;
+  }
+}
+
+.blog__post--article ul:not(.blog__post--share) li::before {
+  display: inline-block;
+  line-height: 1;
+  color: #90ebc2;
+  width: 1rem;
+  content: "\2022";
+}
+
+.blog__post--article blockquote {
+  font-weight: 500;
+  font-family: LL Circular Pro Web, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+  padding-top: 2.5rem;
+  color: #212c52;
+  font-size: 1.125rem;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .blog__post--article blockquote {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.blog__post--article blockquote::before {
+  display: block;
+  position: absolute;
+  font-weight: 600;
+  height: 1.25rem;
+  line-height: 1;
+  top: 0;
+  color: #6bc9eb;
+  font-size: 2.25rem;
+  width: 1.25rem;
+  background-image: url("../img/quote_break.svg");
+  content: '';
+  left: 50%;
+}
+
+.blog__post--article blockquote::after {
+  display: block;
+  position: absolute;
+  font-weight: 600;
+  height: 1rem;
+  line-height: 1;
+  color: #6bc9eb;
+  font-size: 2.25rem;
+  width: 1rem;
+  content: '\201C';
+  left: 1rem;
+  top: 2.5rem;
+}
+
+@media (min-width: 576px) {
+  .blog__post--article blockquote::after {
+    left: 2.5rem;
+  }
+}
+
+.blog__post--resources .btn--icon.\--black > a {
+  color: #3529be;
+}
+
+.blog__post--resources .btn--icon.\--black > a:hover {
+  color: #212c52;
+}
+
+@media (min-width: 768px) {
+  .blog__post--resources .resource-cards .article-card {
+    width: 50%;
+  }
 }
 
 body.menu_open {

@@ -1,0 +1,113 @@
+.blog__post--hero {
+   margin-top: 5.125rem;
+   
+   @screen lg {
+      margin-top: 7.3125rem;
+   }
+}
+
+.blog__post--article {
+   .blog__post--share {
+      @apply flex items-center justify-between list-reset;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 112px;
+      
+      @screen lg {
+         @apply flex-col pt-2;
+         margin-left: 3.75rem;
+         margin-top: 52px;
+         width: 3.25rem;
+      }
+      
+         li {
+            @apply my-2;
+            width: 1.25rem;
+            
+            .svg-icon.social-icon {
+               @apply text-grey-4;
+               width: 1.25rem;
+               
+               &:hover { @apply text-purple-1 }
+               
+               svg { width: 1.25rem }
+            }
+         }
+   }
+   h1, h2, h3, h4, h5, h6 {
+      @apply font-medium font-primary text-delta text-purple-1
+   }
+   
+   p { @apply text-base }
+   
+   p, ul {
+      @apply mb-6
+   }
+   
+   ul:not(.blog__post--share) {
+      @apply list-reset font-medium font-primary;
+      
+      columns: 2;
+      
+      @screen sm {
+         max-width: 32rem
+      }
+      
+      @screen md {
+         columns: 3
+      }
+      
+      li {
+         &::before {
+      		@apply inline-block leading-none text-green-3 w-4;
+      			
+            content: "•"
+         }
+      }
+   }
+   
+   blockquote {
+      @apply font-medium font-primary mb-8 my-12 pl-12 pt-10 text-black-2 text-gamma relative;
+      
+      @screen sm {
+         @apply px-20
+      }
+      
+      &::before {
+         @apply block absolute font-semibold h-5 leading-none pin-t text-blue-4 text-hecto w-5;
+         background-image: url('../img/quote_break.svg');
+         content:'';
+         left: 50%
+      }
+      
+      &::after {
+         @apply block absolute font-semibold h-4 leading-none text-blue-4 text-hecto w-4;
+         content:'“';
+         left: 1rem;
+         top: 2.5rem;
+         
+         @screen sm {
+            left: 2.5rem
+         }
+      }
+   }
+}
+
+.blog__post--resources {
+   .btn--icon.\--black {
+      > a {  
+         @apply text-purple-1;
+         
+         &:hover { @apply text-black-2 }
+      }
+   }
+   
+   .resource-cards {
+      @screen md {
+         .article-card {
+            @apply w-1/2
+         }
+      }
+   }
+}
